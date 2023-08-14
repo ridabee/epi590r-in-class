@@ -9,6 +9,7 @@ nlsy <- read_csv("nlsy.csv",
 								 skip = 1, col_names = nlsy_cols)
 
 library(dplyr)
+#This doesnt work becase we dont have the same directory
 nlsy <- nlsy |>
 	mutate(region_cat = factor(region, labels = c("Northeast", "North Central", "South", "West")),
 				 sex_cat = factor(sex, labels = c("Male", "Female")),
